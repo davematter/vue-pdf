@@ -9,7 +9,8 @@
 	} else {
 
 		var pdfjsWrapper = require('./pdfjsWrapper.js').default;
-		var PDFJS = require('pdfjs-dist/webpack.js');
+    PDFJS.disableWorker = true;
+
 		var component = componentFactory(pdfjsWrapper(PDFJS));
 	}
 
